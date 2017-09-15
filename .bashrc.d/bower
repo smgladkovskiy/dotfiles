@@ -1,0 +1,10 @@
+bower () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        -it \
+        --rm \
+        -v $(pwd):/app \
+        furdarius/bower-docker:alpine "$@"
+}

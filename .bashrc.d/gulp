@@ -1,0 +1,11 @@
+gulp () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+        --volume $(pwd):/app \
+	--user $(id -u) \
+        furdarius/gulp-docker:alpine "$@"
+}

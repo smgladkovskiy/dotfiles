@@ -1,0 +1,13 @@
+npm () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+	--net=host \
+        --volume $(pwd):/app \
+	--volume ~/.npm:/npm-data \
+	-e "NPM_CONFIG_CACHE=/npm-alpine-data" \
+        furdarius/npm-hard-docker:alpine "$@"
+}

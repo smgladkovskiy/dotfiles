@@ -1,0 +1,12 @@
+[core]
+    editor = vim
+    autocrlf = input
+[user]
+    name = Sergey Gladkovskiy
+    email = smgladkovskiy@gmail.com
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+[http "https://git.prod.flynn.roquie.com"]
+	sslCAInfo = /Users/smgladkovskiy/.flynn/ca-certs/default.pem
+[credential "https://git.prod.flynn.roquie.com"]
+	helper = /usr/local/bin/flynn git-credentials

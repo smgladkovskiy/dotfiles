@@ -1,0 +1,13 @@
+composer () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --interactive \
+        --rm \
+        --user $(id -u):$(id -g) \
+        --volume $(pwd):/app \
+	--volume ~/.composer:/composer \
+	--volume ~/.ssh:/root/.ssh \
+        composer "$@"
+}
