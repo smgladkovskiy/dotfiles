@@ -1,0 +1,14 @@
+dnode () {
+    tty=
+    tty -s && tty=--tty
+    docker run \
+        $tty \
+        --rm \
+        --interactive \
+        --net=host \
+        --volume $(pwd):/app \
+        --volume ~/.npm:/npm-data \
+        --workdir /app \
+        -e NPM_CONFIG_CACHE=/npm-data \
+        node:8-alpine "$@"
+}

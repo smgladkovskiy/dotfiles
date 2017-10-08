@@ -6,7 +6,9 @@
     email = smgladkovskiy@gmail.com
 [url "git@github.com:"]
     insteadOf = https://github.com/
+[url "git@gitlab.tm-consulting.ru:"]
+    insteadOf = https://gitlab.tm-consulting.ru/
 [http "https://git.prod.flynn.roquie.com"]
-	sslCAInfo = /Users/smgladkovskiy/.flynn/ca-certs/default.pem
+    sslCAInfo = /Users/smgladkovskiy/.flynn/ca-certs/default.pem
 [credential "https://git.prod.flynn.roquie.com"]
-	helper = /usr/local/bin/flynn git-credentials
+    helper = /usr/local/bin/flynn git-credentials
