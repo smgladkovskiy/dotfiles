@@ -4,11 +4,22 @@
 [user]
     name = Sergey Gladkovskiy
     email = smgladkovskiy@gmail.com
+	signingkey = 96A0C19E425861D0
 [url "git@github.com:"]
     insteadOf = https://github.com/
-[url "git@gitlab.tm-consulting.ru:"]
-    insteadOf = https://gitlab.tm-consulting.ru/
+[url "git@gitlab.teamc.io:"]
+    insteadOf = https://gitlab.teamc.io/
 [http "https://git.prod.flynn.roquie.com"]
     sslCAInfo = /Users/smgladkovskiy/.flynn/ca-certs/default.pem
 [credential "https://git.prod.flynn.roquie.com"]
     helper = /usr/local/bin/flynn git-credentials
+[http "https://git.calcifer.teamc.io"]
+	sslCAInfo = /Users/smgladkovskiy/.flynn/ca-certs/calcifer.pem
+[credential "https://git.calcifer.teamc.io"]
+	helper = /usr/local/bin/flynn git-credentials
+[http "https://git.worldwifi.teamc.io"]
+	sslCAInfo = /Users/smgladkovskiy/.flynn/ca-certs/wwf.pem
+[credential "https://git.worldwifi.teamc.io"]
+	helper = /usr/local/bin/flynn git-credentials
+[commit]
+	gpgsign = true
